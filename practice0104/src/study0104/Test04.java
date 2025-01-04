@@ -14,8 +14,5 @@ public class Test04 {
 		f.start(); 
 		t1.start();
 		p.start();
-		
-
 	}
-
 }
