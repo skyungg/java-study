@@ -6,6 +6,7 @@ public class Test08 {
 		// TODO Auto-generated method stub
 		PrintThread t = new PrintThread();
 		t.start();
+//		t.interrupt();
 	}
 }
 
