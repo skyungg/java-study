@@ -35,9 +35,11 @@ class DrawThread extends Thread{
 	}
 	
 	public void run() {
-		for(int i = 0; i < 10; i++) {
-			account.draw(10);
-			System.out.println(this.getName()+ " 출금 후 잔액 "+account.getBalance());
+		synchronized( account) {
+			for(int i = 0; i < 10; i++) {
+				account.draw(10);
+				System.out.println(this.getName()+ " 출금 후 잔액 "+account.getBalance());
+			}
 		}
 	}
 }
