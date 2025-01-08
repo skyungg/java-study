@@ -18,7 +18,7 @@ public class Test05 {
 class Account{
 	private long balance = 1000;
 	
-	public void draw(long amount) {
+	public synchronized void draw(long amount) {	// 메서드 동기화
 		balance -= amount;
 	}
 	
@@ -35,11 +35,11 @@ class DrawThread extends Thread{
 	}
 	
 	public void run() {
-		synchronized( account) {
+//		synchronized( account) {		// 블록 동기화
 			for(int i = 0; i < 10; i++) {
 				account.draw(10);
 				System.out.println(this.getName()+ " 출금 후 잔액 "+account.getBalance());
 			}
 		}
-	}
+//	}
 }
