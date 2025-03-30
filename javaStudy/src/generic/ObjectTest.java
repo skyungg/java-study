@@ -1,22 +1,18 @@
 package generic;
 
 class ObjectMart{
-	private Object thing;
-	
-//	public ObjectMart(Object thing) {
-//		this.thing = thing;
-//	}
+	private Object object;
 	
 	public Object getThing() {
-		return thing;
+		return object;
 	}
 	
 	public void setThing(Object thing) {
-		this.thing = thing;
+		this.object = thing;
 	}
 	
 	void showType() {
-		System.out.println("T의 타입은 " + thing.getClass().getName());
+		System.out.println("T의 타입은 " + object.getClass().getName());
 	}
 	
 
