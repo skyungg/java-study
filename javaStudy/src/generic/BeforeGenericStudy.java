@@ -54,7 +54,7 @@ public class BeforeGenericStudy {
 		Mart3 mart3 = new Mart3();
 		Mango mango = mart3.getMango();
 		
-		// Mart3에는 Orange를 담을 수 없음 -> 에러남.
+		// Mart3는 Mango만 담을 수 있으므로, Orange는 담을 수 없음 -> 에러남.
 //		Orange orange = mart3.getMango();
 		
 	}
